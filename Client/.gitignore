@@ -27,4 +27,4 @@ dist-ssr
 node_modules
 package.json
 context/
-Client/srs/components/pages/VerifyOtp.jsx
+Client/srs/pages/VerifyOtp.jsx
