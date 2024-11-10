@@ -25,6 +25,6 @@ dist-ssr
 
 .env
 node_modules
-package.json
+
 context/
 Client/src/pages/VerifyOtp.jsx
