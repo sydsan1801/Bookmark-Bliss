@@ -18,7 +18,7 @@ const Settings = () => {
 
   useEffect(()=>{
   const fetch=async()=>{
-    const response=await axios.get("https://bookmark-bliss.vercel.app/get-user-information",{headers})
+    const response=await axios.get("https://bookmark-bliss.vercel.app/api/v1/get-user-information",{headers})
     // console.log(response)
     SetProfileData(response.data)
     // update Address 
@@ -30,7 +30,7 @@ const Settings = () => {
 
   const submitAddress=async()=>{
     try{
-      const response=await axios.put("https://bookmark-bliss.vercel.app/update-address",{Value},{headers})
+      const response=await axios.put("https://bookmark-bliss.vercel.app/api/v1/update-address",{Value},{headers})
       toast.success(response.data.message)
     }
     catch(error){

@@ -9,7 +9,7 @@ const Favourites = () => {
     }
     useEffect(()=>{
         const fetch=async()=>{
-        const response=await axios.get("https://bookmark-bliss.vercel.app/get-favourite-books",{headers})
+        const response=await axios.get("https://bookmark-bliss.vercel.app/api/v1/get-favourite-books",{headers})
         setFavouritesBooks(response.data.data)
     }
     fetch()

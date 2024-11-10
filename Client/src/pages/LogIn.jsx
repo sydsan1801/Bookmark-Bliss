@@ -18,7 +18,7 @@ const Login = () => {
         toast.error("All fields are required")
       }
       
-        const response=await axios.post("https://bookmark-bliss.vercel.app/sign-in",Values);
+        const response=await axios.post("https://bookmark-bliss.vercel.app/api/v1/sign-in",Values);
         toast.success(response.data.message)
         navigate("/")
         // console.log(response.data.data)

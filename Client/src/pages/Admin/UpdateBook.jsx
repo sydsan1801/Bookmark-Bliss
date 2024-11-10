@@ -35,7 +35,7 @@ const UpdateBook = () => {
         //     toast.error("All fields are required")
         //     return 
         // }
-          const response=await axios.put("https://bookmark-bliss.vercel.app/update-book",Data,{headers})
+          const response=await axios.put("https://bookmark-bliss.vercel.app/api/v1/update-book",Data,{headers})
           setData({url:"",title:"",author:"",price:"",desc:"",language:""})
           toast.success(response.data.message)
           // console.log(response)
@@ -49,7 +49,7 @@ const UpdateBook = () => {
 
       useEffect(()=>{
         const fetch=async()=>{
-          const response=await axios.get(`https://bookmark-bliss.vercel.app/get-book-by-id/${id}`);
+          const response=await axios.get(`https://bookmark-bliss.vercel.app/api/v1/get-book-by-id/${id}`);
           setData(response.data.data)
         }
         fetch()
