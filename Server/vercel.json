@@ -1,16 +1,16 @@
 {
   "version": 2,
-  "name": "Bookmark Bliss",
+  "name": "Bookmark Bliss Server",
   "builds": [
     {
-      "src": "server/app.js",
+      "src": "app.js",
       "use": "@vercel/node"
     }
   ],
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "server/app.js"
+      "dest": "/app.js"
     }
   ]
 }
