@@ -13,7 +13,7 @@ const BookCard = ({data,favourite}) => {
   }
   const handleRemoveFavourites=async()=>{
     try{
-      const response=await axios.put("https://bookmark-bliss.vercel.app/remove-book-from-favourite",{},{headers})
+      const response=await axios.put("https://bookmark-bliss.vercel.app/api/v1/remove-book-from-favourite",{},{headers})
       // console.log(response)
       toast.success(response.data.message)
 
