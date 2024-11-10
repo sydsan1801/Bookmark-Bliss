@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "name": "Bookmark Bliss Frontend",
+  "builds": [
+    {
+      "src": "frontend/package.json",
+      "use": "@vercel/static-build"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "Client/build/$1"
+    }
+  ]
+}
