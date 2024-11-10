@@ -22,7 +22,7 @@ const AllOrders = () => {
   useEffect(()=>{
     try{
       const fetch=async()=>{
-        const response=await axios.get("http://localhost:1000/api/v1/get-all-orders",{headers})
+        const response=await axios.get("https://bookmark-bliss.vercel.app/get-all-orders",{headers})
         // console.log(response.data.data)
         SetAllOrders(response.data.data)
 
@@ -43,7 +43,7 @@ const AllOrders = () => {
   const id = AllOrders[i]._id;
   try {
     const response = await axios.put(
-      `http://localhost:1000/api/v1/update-status/${id}`,
+      `https://bookmark-bliss.vercel.app/update-status/${id}`,
       Values,
       { headers }
     );

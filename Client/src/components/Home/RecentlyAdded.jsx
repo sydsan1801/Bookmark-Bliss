@@ -6,7 +6,7 @@ const RecentlyAdded = () => {
   const [Data,setData]=useState()
   useEffect(()=>{
     const fetch=async()=>{
-      const response=await axios.get("http://localhost:1000/api/v1/get-recent-books");
+      const response=await axios.get("https://bookmark-bliss.vercel.app/get-recent-books");
       // console.log(response.data.data)
       setData(response.data.data)
     };

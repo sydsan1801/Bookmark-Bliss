@@ -32,7 +32,7 @@ const submit=async()=>{
             toast.error("All fields are required")
         }
         
-            const response=await axios.post("http://localhost:1000/api/v1/add-book",Data,{headers})
+            const response=await axios.post("https://bookmark-bliss.vercel.app/add-book",Data,{headers})
             setData({url:"",title:"",author:"",price:"",desc:"",language:""})
             toast.success(response.data.message)
             // console.log(response.data.response)

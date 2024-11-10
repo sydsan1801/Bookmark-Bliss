@@ -18,7 +18,7 @@ const Cart = () => {
   // Get user cart
   useEffect(() => {
     const fetch = async () => {
-      const response = await axios.get("http://localhost:1000/api/v1/get-user-cart", { headers })
+      const response = await axios.get("https://bookmark-bliss.vercel.app/get-user-cart", { headers })
       setCart(response.data.data)
     }
     fetch();
@@ -27,7 +27,7 @@ const Cart = () => {
   // Remove items from cart
   const deleteItem = async (bookid) => {
     try {
-      const response = await axios.put(`http://localhost:1000/api/v1/remove-from-cart/${bookid}`, {}, { headers })
+      const response = await axios.put(`https://bookmark-bliss.vercel.app/remove-from-cart/${bookid}`, {}, { headers })
       toast.success(response.data.message)
     }
     catch (error) {
@@ -56,7 +56,7 @@ const Cart = () => {
   // Place Order Function
   const PlaceOrder = async () => {
     try {
-      const response = await axios.post(`http://localhost:1000/api/v1/place-order`, { order: Cart }, { headers })
+      const response = await axios.post(`https://bookmark-bliss.vercel.app/place-order`, { order: Cart }, { headers })
       toast.success(response.data.message)
       navigate("/profile/orderHistory")
     }

@@ -12,7 +12,7 @@ const UserOrderHistory = () => {
   
   useEffect(()=>{
     const fetch=async()=>{
-      const response=await axios.get("http://localhost:1000/api/v1/get-order-history",{headers})
+      const response=await axios.get("https://bookmark-bliss.vercel.app/get-order-history",{headers})
       // console.log(response.data)
       setOrderHistory(response.data.data)
     }
