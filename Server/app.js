@@ -25,8 +25,7 @@ app.use("/api/v1",Favourite)
 app.use("/api/v1",Cart)
 app.use("/api/v1",Order)
 
-// app.listen(process.env.PORT,()=>{
-//     console.log(`Server is running on ${process.env.PORT}`)
-// })
+app.listen(process.env.PORT,()=>{
+    console.log(`Server is running on ${process.env.PORT}`)
+})
 
-module.exports = app;
