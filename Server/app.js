@@ -3,7 +3,7 @@ const app=express()
 const cors=require("cors")
 
 app.use(cors(
-   { origin:['https://bookmark-bliss-frontend.vercel.app'] ,  
+   { origin:[''] ,  
   methods: ['GET, POST, PUT, DELETE'], 
   credentials: true,  }
 ));  
